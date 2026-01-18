@@ -62,11 +62,11 @@ This project implements a **psychological persuasion framework** for AI interact
 prepend-prompt/
 ├── .git/                       # Git version control
 ├── .github/
-│   └── copilot-instructions.md # Secure Pride AI development framework (30,247 bytes)
+│   └── copilot-instructions.md # Secure Pride AI development framework (565 lines, 30KB)
 ├── .gitignore                  # macOS, editor, and backup file exclusions
-├── CONTRIBUTING.md             # Contribution guidelines (2,482 bytes)
-├── LICENSE                     # MIT License (1,071 bytes)
-└── README.md                   # Comprehensive project documentation (5,728 bytes)
+├── CONTRIBUTING.md             # Contribution guidelines (92 lines, 2.5KB)
+├── LICENSE                     # MIT License (21 lines, 1.1KB)
+└── README.md                   # Comprehensive project documentation (159 lines, 5.6KB)
 ```
 
 ### Notable Absences
@@ -196,7 +196,7 @@ This 30KB document establishes:
 
 #### PR #3 (Merged): "Add GitHub Copilot instructions with Secure Pride operational framework"
 - **Status**: Merged (January 12, 2026)
-- **Changes**: Created `.github/copilot-instructions.md` (565 lines)
+- **Changes**: Created `.github/copilot-instructions.md` (565 lines, 30KB)
 - **Impact**: Established AI-assisted development standards
 - **Key Features**:
   - Privacy-first mandate (SOGI data protection)
@@ -460,11 +460,20 @@ This project is in the **"Preparation Phase"**: The conceptual architecture and 
 - **Configuration**: 1 file (.gitignore)
 - **Implementation**: 0 files
 
-### Documentation Word Counts (Approximate)
+### Documentation Metrics
 
+**Line Counts**:
+- .github/copilot-instructions.md: 565 lines (30KB)
+- README.md: 159 lines (5.6KB)
+- CONTRIBUTING.md: 92 lines (2.5KB)
+- LICENSE: 21 lines (1.1KB)
+
+**Total**: 837 lines
+
+**Estimated Word Counts**:
+- .github/copilot-instructions.md: ~5,000 words
 - README.md: ~900 words
 - CONTRIBUTING.md: ~400 words
-- .github/copilot-instructions.md: ~5,000 words
 - LICENSE: ~170 words
 
 **Total Documentation**: ~6,470 words
