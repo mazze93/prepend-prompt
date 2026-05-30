@@ -13,12 +13,22 @@
     "LICENSE"
   ],
   "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "start": "node dist/stdio.js",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazze93/prepend-prompt.git"
+  },
+  "author": "Kairos Contributors",
+  "bugs": {
+    "url": "https://github.com/mazze93/prepend-prompt/issues"
   },
   "keywords": [
     "mcp",
