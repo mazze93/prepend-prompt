@@ -1,6 +1,6 @@
-# Contributing to Prepend Prompt
+# Contributing to Kairos
 
-Thank you for your interest in contributing to Prepend Prompt! This document provides guidelines for contributing to the project.
+Thank you for your interest in contributing to Kairos! This document provides guidelines for contributing to the project.
 
 ## How to Contribute
 
@@ -13,18 +13,17 @@ If you find a bug or have a suggestion:
 3. Include:
    - Steps to reproduce (for bugs)
    - Expected vs. actual behavior
-   - Your iOS/macOS version
-   - Shortcuts app version
+   - Node version and runtime (Workers / stdio host)
+   - The exact JSON-RPC request, if relevant
 
 ### Suggesting Enhancements
 
 We welcome suggestions for:
 
-- New prompt templates for existing principles
-- Additional influence principles or frameworks
-- Improved documentation
-- Better examples
-- Translations to other languages
+- New frameworks (thinking or persuasion lenses)
+- Sharper selection signals for `apply_best_framework`
+- Better `wrap()` templates for existing frameworks
+- Improved documentation and examples
 
 ### Submitting Changes
 
@@ -38,29 +37,32 @@ We welcome suggestions for:
 
 ## Development Guidelines
 
-### For Prompt Templates
+### Adding a Framework
+
+Append one entry to `FRAMEWORKS` in `src/frameworks.ts` with `id`, `name`,
+`category`, `description`, `signals`, and a `wrap(query)` function. It will
+automatically appear as a prompt, a resource, an `apply_framework` option, and
+an `apply_best_framework` candidate — no other wiring needed. Add tests in
+`test/` for the new lens and its selection signals.
+
+### For `wrap()` Templates
 
 - Keep templates concise (ideally under 100 words)
-- Maintain the structure: Context → Query → Instruction
-- Ensure templates align with Cialdini's principles
-- Test with various query types
+- Persuasion lenses follow the structure: Context → Request → Instruction
+- Always include the trimmed query so the user's intent is preserved
 - Avoid jargon or overly complex language
+
+### For Code
+
+- TypeScript, `strict` mode; run `npm run typecheck` before opening a PR
+- Add or update Vitest tests; `npm test` must pass
+- Keep the dispatcher transport-agnostic so both the Worker and stdio benefit
+- Comment non-obvious logic
 
 ### For Documentation
 
-- Use clear, simple language
-- Include examples where helpful
-- Keep formatting consistent
-- Update the Table of Contents if adding sections
-- Check for spelling and grammar
-
-### For Code/Shortcuts
-
-- Comment complex logic
-- Follow Apple Shortcuts best practices
-- Test on both iOS and macOS (if applicable)
-- Ensure backward compatibility when possible
-- Document any API changes or requirements
+- Use clear, simple language and include examples where helpful
+- Keep formatting consistent and update the Table of Contents when adding sections
 
 ## Code of Conduct
 
@@ -89,4 +91,4 @@ If you have questions about contributing, feel free to:
 
 This Contributing Guide is adapted from open-source contributing guidelines.
 
-Thank you for helping make Prepend Prompt better!
+Thank you for helping make Kairos better!

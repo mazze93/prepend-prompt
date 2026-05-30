@@ -1,0 +1,40 @@
+{
+  "name": "kairos",
+  "version": "1.0.0",
+  "description": "Kairos — an MCP server that reframes raw queries through thinking and persuasion frameworks (Cialdini, SCAMPER, First Principles, Socratic, and more), with framework-selection-as-a-tool.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "kairos": "dist/stdio.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "start": "node dist/stdio.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "prompt-engineering",
+    "frameworks",
+    "cialdini",
+    "scamper",
+    "first-principles",
+    "cloudflare-workers"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^3.78.0"
+  }
+}

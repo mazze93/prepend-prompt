@@ -32,3 +32,16 @@ Temporary Items
 # Backup files
 *.bak
 *.backup
+
+# Node / TypeScript
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Cloudflare Wrangler
+.wrangler/
+.dev.vars
+
+# Logs
+npm-debug.log*
+*.log
