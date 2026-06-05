@@ -1,0 +1,50 @@
+{
+  "name": "kairos",
+  "version": "1.0.0",
+  "description": "Kairos — an MCP server that reframes raw queries through thinking and persuasion frameworks (Cialdini, SCAMPER, First Principles, Socratic, and more), with framework-selection-as-a-tool.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "kairos": "dist/stdio.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "start": "node dist/stdio.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazze93/prepend-prompt.git"
+  },
+  "author": "Kairos Contributors",
+  "bugs": {
+    "url": "https://github.com/mazze93/prepend-prompt/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "prompt-engineering",
+    "frameworks",
+    "cialdini",
+    "scamper",
+    "first-principles",
+    "cloudflare-workers"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^3.78.0"
+  }
+}

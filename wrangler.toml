@@ -1,0 +1,10 @@
+name = "kairos"
+main = "src/worker.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Stateless Streamable HTTP MCP server. No bindings, no Durable Objects —
+# scales horizontally on the Workers free tier.
+
+[observability]
+enabled = true
