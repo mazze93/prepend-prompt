@@ -41,10 +41,10 @@
     "cloudflare-workers"
   ],
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260801.1",
+    "@cloudflare/workers-types": "^5.20260822.1",
     "@types/node": "^26.2.0",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.10",
+    "vitest": "^4.1.11",
     "wrangler": "^4.125.0"
   }
 }
